@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  font-family: "Roboto", serif;
+  background-image: url('../img/bg-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.todo__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.todo__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo__inner {
+  width: 100%;
+  max-width: 500px;
+  min-height: 500px;
+  border-radius: 20px;
+  padding: 50px;
+  background-image: url('../img/coder-wallpaper-.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transform: translateY(0);
+  animation-name: inner;
+  animation-duration: 0.6s;
+  animation-direction: linear;
+}
+
+@keyframes inner {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.todo__form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.todo__inp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.todo__inp:focus {
+  outline: 1px solid #ccc;
+}
+
+.todo__btn {
+  border: 1px solid #fd6666;
+  border-radius: 20px;
+  background-color: #fd6666;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  top: 2.5px;
+  right: 3px;
+  position: absolute;
+  transition: all  0.2s ease;
+}
+
+.todo__btn:hover {
+  background-color: transparent;
+  color: #fd6666;
+}
+
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transform: translateX(0);
+  animation-name: items;
+  animation-duration: 0.6s;
+  animation-direction: linear;
+}
+
+@keyframes items {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.todo__check {
+  cursor: pointer;
+}
+
+.todo__text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.todo__trash {
+  font-size: 20px;
+  background-color: red;
+  color: #fff;
+  border: 1px solid red;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cm {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+@media only screen and (max-width:576px) {
+  .todo__btn {
+    font-size: 12px;
+  }
+} 
