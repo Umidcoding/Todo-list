@@ -4,13 +4,16 @@ let elTodoList = document.querySelector('.todo__list');
 
 
 elTodoForm.addEventListener('submit', addItem);
+elTodoList.addEventListener("click", deleteItem)
 
-elTodoList.addEventListener("click", (e) => {
+
+function deleteItem(e) {
   if(e.target.classList.contains('todo__trash')) {
-   e.target.parentElement.remove(); 
-  }
-  
-})
+    e.target.parentElement.remove(); 
+   }
+}
+
+
 let infoArr = []
 
 function addItem(e) {
